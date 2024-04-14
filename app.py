@@ -12,12 +12,6 @@ from joblib import Parallel, delayed
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Set page config first
-st.set_page_config(
-    page_title="AI-ML Decision System for Effective Farming",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 
 # Home page
 if 'page' not in st.session_state:
@@ -38,23 +32,7 @@ else:
     st.session_state['page'] = 'home'
 
 
-# Define language options
-languages = {
-    'English': 'en',
-    'Polish': 'pl',
-    'German': 'de'
-}
 
-# Create a dropdown for language selection
-selected_language = st.selectbox('Select language:', list(languages.keys()))
-
-# Display translated text based on selected language
-if selected_language == 'English':
-    st.write("Hello! Welcome to the English version.")
-elif selected_language == 'Polish':
-    st.write("Witaj! Witamy w polskiej wersji.")
-elif selected_language == 'German':
-    st.write("Hallo! Willkommen zur deutschen Version.")
 
 # Home page
 if st.session_state['page'] == 'home':
@@ -158,10 +136,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
 
             st.markdown(f"""<h5 style = 'text-align: center; height: 300px; object-fit: contain;'> {df_image} </h5>""", unsafe_allow_html=True)
         
-        # Text-to-speech functionality
-        tts_text = f"The best crop to plant is {rdf_predicted_value[0]}"
-        components.iframe(f"https://responsivevoice.org/text-to-speech-demo/?text={tts_text}&voice=UK%20English%20Male", width=400, height=300)
-
+        
 # Fertilizer recommendation page
 if 'page' in st.session_state and st.session_state['page'] == 'fertilizer_recommendation':
     # Add your fertilizer recommendation code here
@@ -373,4 +348,3 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_yield_predic
             st.markdown(f"<h3 style='text-align: center;'>Yield Prediction : {rdf_predicted_value[0]}.</h3>", 
             unsafe_allow_html=True)
         
-
