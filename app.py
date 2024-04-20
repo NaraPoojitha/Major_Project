@@ -194,13 +194,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'fertilizer_recomm
         fig.update_traces(marker_color="#8C564B")
         fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
         st.plotly_chart(fig, use_container_width= True)
-
-    st.text("Now insert the values and the system will predict the best crop to plant.")
-    st.text("In the (?) marks you can get some help about each feature.")
-
-    
-
-    
+ 
 
     st.text("Now insert the values and the system will predict the fertilizer.")
     st.text("In the (?) marks you can get some help about each feature.")
