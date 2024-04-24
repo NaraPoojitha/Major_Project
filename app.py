@@ -104,8 +104,8 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
 
     with col3:
         n_input = st.number_input('Insert N (kg/ha) value:', min_value= 0, max_value= 140, help = 'Insert here the Nitrogen density (kg/ha) from 0 to 140.')
-        p_input = st.number_input('Insert P (kg/ha) value:', min_value= 0, max_value= 145, help = 'Insert here the Phosphorus density (kg/ha) from 5 to 145.')
-        k_input = st.number_input('Insert K (kg/ha) value:', min_value= 0, max_value= 200, help = 'Insert here the Potassium density (kg/ha) from 5 to 200.')
+        p_input = st.number_input('Insert P (kg/ha) value:', min_value= 5, max_value= 145, help = 'Insert here the Phosphorus density (kg/ha) from 5 to 145.')
+        k_input = st.number_input('Insert K (kg/ha) value:', min_value= 5, max_value= 200, help = 'Insert here the Potassium density (kg/ha) from 5 to 200.')
         temp_input = st.number_input('Insert Avg Temperature (ºC) value:', min_value= 9., max_value= 49., step = 1., format="%.2f", help = 'Insert here the Avg Temperature (ºC) from 9 to 49.')
 
     with col5:
