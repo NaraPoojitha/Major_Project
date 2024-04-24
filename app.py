@@ -112,7 +112,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
         hum_input = st.number_input('Insert Avg Humidity (%) value:', min_value= 14., max_value= 100., step = 1., format="%.2f", help = 'Insert here the Avg Humidity (%) from 15 to 99.')
         ph_input = st.number_input('Insert pH value:', min_value= 3.6, max_value= 9.9, step = 0.1, format="%.2f", help = 'Insert here the pH from 3.6 to 9.9')
         rain_input = st.number_input('Insert Avg Rainfall (mm) value:', min_value= 30.0, max_value= 2700.0, step = 0.1, format="%.2f", help = 'Insert here the Avg Rainfall (mm) from 21 to 2700')
-        season_input = st.number_input('Insert season number: ', min_value = 0, max_value = 3, help = '{'Autumn': 0, 'Monsoon': 1, 'Spring': 2, 'Summer': 3, 'Winter': 4}')
+        season_input = st.number_input('Insert season number: ', min_value = 0, max_value = 3, help = 'Autumn: 0, Monsoon: 1, Spring: 2, Summer: 3, Winter: 4')
     predict_inputs = [[n_input,p_input,k_input,temp_input,hum_input,ph_input,rain_input,season_input]]
 
     with col5:
