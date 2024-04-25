@@ -82,20 +82,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
 
     df_desc = pd.read_csv('Crop_Desc.csv', sep = ';', encoding = 'utf-8', encoding_errors = 'ignore')
 
-    st.markdown("<h5 style='text-align: center;'>Importance of each Feature in the Model:</h5>", unsafe_allow_html=True)
-
-    importance = pd.DataFrame({'Feature': list(X.columns),
-                   'Importance(%)': rdf_clf.feature_importances_}).\
-                    sort_values('Importance(%)', ascending = True)
-    importance['Importance(%)'] = importance['Importance(%)'] * 100
-
-    colx, coly, colz = st.columns([1,4,1], gap = 'medium')
-    with coly:
-        color_discrete_sequence = '#609cd4'
-        fig = px.bar(importance , x = 'Importance(%)', y = 'Feature', orientation= 'h', width = 200, height = 300)
-        fig.update_traces(marker_color="#8C564B")
-        fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
-        st.plotly_chart(fig, use_container_width= True)
+   
 
     st.text("Now insert the values and the system will predict the best crop to plant.")
     st.text("In the (?) marks you can get some help about each feature.")
@@ -180,31 +167,18 @@ if 'page' in st.session_state and st.session_state['page'] == 'fertilizer_recomm
     y = df['Fertilizer Name']
 
     
-    st.markdown("<h5 style='text-align: center;'>Importance of each Feature in the Model:</h5>", unsafe_allow_html=True)
-
-    importance = pd.DataFrame({'Feature': list(X.columns),
-                   'Importance(%)': rdf_clf.feature_importances_}).\
-                    sort_values('Importance(%)', ascending = True)
-    importance['Importance(%)'] = importance['Importance(%)'] * 100
-
-    colx, coly, colz = st.columns([1,4,1], gap = 'medium')
-    with coly:
-        color_discrete_sequence = '#609cd4'
-        fig = px.bar(importance , x = 'Importance(%)', y = 'Feature', orientation= 'h', width = 200, height = 300)
-        fig.update_traces(marker_color="#8C564B")
-        fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
-        st.plotly_chart(fig, use_container_width= True)
+    
  
 
-    st.text("Now insert the values and the system will predict the fertilizer.")
+    st.text("Now insert the values and the system will recommend the fertilizer.")
     st.text("In the (?) marks you can get some help about each feature.")
 
     col1, col2, col3, col4, col5, col6, col7, col8 = st.columns([1,1,4,1,4,1,1,1], gap = 'medium')
 
     with col3:
-        n_input = st.number_input('Insert N (kg/ha) value:', min_value= 0, max_value= 300, help = 'Insert here the Nitrogen density (kg/ha) from 0 to 140.')
-        p_input = st.number_input('Insert P (kg/ha) value:', min_value= 0, max_value= 300, help = 'Insert here the Phosphorus density (kg/ha) from 5 to 145.')
-        k_input = st.number_input('Insert K (kg/ha) value:', min_value= 0, max_value= 300, help = 'Insert here the Potassium density (kg/ha) from 5 to 205.')
+        n_input = st.number_input('Insert N (kg/ha) value:', min_value= 0, max_value= 145, help = 'Insert here the Nitrogen density (kg/ha) from 0 to 140.')
+        p_input = st.number_input('Insert P (kg/ha) value:', min_value= 5, max_value= 150, help = 'Insert here the Phosphorus density (kg/ha) from 5 to 145.')
+        k_input = st.number_input('Insert K (kg/ha) value:', min_value= 5, max_value= 205, help = 'Insert here the Potassium density (kg/ha) from 5 to 205.')
         temp_input = st.number_input('Insert Avg Temperature (ºC) value:', min_value= 9., max_value= 49., step = 1., format="%.2f", help = 'Insert here the Avg Temperature (ºC) from 9 to 43.')
 
     with col5:
@@ -292,22 +266,6 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_yield_predic
 
     X = df.drop(["Production"], axis=1)
    
-    
-
-    st.markdown("<h5 style='text-align: center;'>Importance of each Feature in the Model:</h5>", unsafe_allow_html=True)
-
-    importance = pd.DataFrame({'Feature': list(X.columns),
-                   'Importance(%)': rdf_clf.feature_importances_}).\
-                    sort_values('Importance(%)', ascending = True)
-    importance['Importance(%)'] = importance['Importance(%)'] * 100
-
-    colx, coly, colz = st.columns([1,4,1], gap = 'medium')
-    with coly:
-        color_discrete_sequence = '#609cd4'
-        fig = px.bar(importance , x = 'Importance(%)', y = 'Feature', orientation= 'h', width = 200, height = 300)
-        fig.update_traces(marker_color="#8C564B")
-        fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
-        st.plotly_chart(fig, use_container_width= True)
 
     st.text("Now insert the values and the system will predict the yield.")
     st.text("In the (?) marks you can get some help about each feature.")
