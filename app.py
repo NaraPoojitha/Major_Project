@@ -271,7 +271,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_yield_predic
     st.text("In the (?) marks you can get some help about each feature.")
 
     col1, col2, col3, col4, col5, col6, col7, col8 = st.columns([1,1,4,1,4,1,1,1], gap = 'medium')
-
+    state_district_map = {state: df[df['State_Name'] == state]['District_Name'].unique().tolist() for state in df['State_Name'].unique()}
     with col3:
         # User input for state
         state_input = st.selectbox('Select State:', df['State_Name'].unique(), format_func=lambda x: x)
