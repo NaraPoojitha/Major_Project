@@ -46,6 +46,9 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
     <style>
     [data-testid="stAppViewContainer"] {{
     background-color:#90EE90; /* changed to #90EE90 */
+    background-image: url("https://img.freepik.com/premium-photo/different-ingredients-cooking-green-background_185193-88921.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
 
     }}
     [data-testid="stSidebar"] {{
@@ -133,14 +136,14 @@ if 'page' in st.session_state and st.session_state['page'] == 'fertilizer_recomm
     <style>
     [data-testid="stAppViewContainer"] {{
     background-color:#90EE90; /* changed to #90EE90 */
+    background-image: url("https://i0.wp.com/blog.chargeerp.com/wp-content/uploads/2022/01/11-Types-Of-Agrochemicals-Used-In-Farming.png?fit=1200%2C675&ssl=1");
+    background-repeat: no-repeat;
+    background-size:cover;
 
     }}
     [data-testid="stSidebar"] {{
     background-color:#8F9779; /* unchanged */
 
-    }}
-    [data-testid="stHeader"] {{
-    background-color:#90EE90; /* changed to #90EE90 */
     }}
     [data-testid="stToolbar"] {{
     background-color:#90EE90; /* changed to #90EE90 */
@@ -234,6 +237,8 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_yield_predic
     <style>
     [data-testid="stAppViewContainer"] {{
     background-color:#90EE90; /* changed to #90EE90 */
+    background-image: url("https://www.agrivi.com/wp-content/uploads/2021/05/Is-Simple-Monoculture-Better-for-Crop-Production-1200x565.jpeg");
+    background-size:cover;
 
     }}
     [data-testid="stSidebar"] {{
