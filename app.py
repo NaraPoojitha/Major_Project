@@ -273,10 +273,22 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_yield_predic
     col1, col2, col3, col4, col5, col6, col7, col8 = st.columns([1,1,4,1,4,1,1,1], gap = 'medium')
 
     with col3:
+        # User input for state
         state_input = st.selectbox('Select State:', df['State_Name'].unique(), format_func=lambda x: x)
-        state_input = np.where(df['State_Name'].unique() == state_input)[0][0]
-        district_input = st.selectbox('Select District:', df['District_Name'].unique(), format_func=lambda x: x)
-        district_input = np.where(df['District_Name'].unique() == district_input)[0][0]
+
+        # Check if the selected state exists in the dictionary
+        if state_input in state_district_map:
+            # Get the selected state's districts
+            districts_in_state = state_district_map[state_input]
+            
+            # User input for district
+            district_input = st.selectbox('Select District:', districts_in_state, format_func=lambda x: x)
+            district_input = np.where(df['District_Name'].unique() == district_input)[0][0]
+
+            # Other inputs...
+        else:
+            st.error("Selected state not found in the dataset.")
+                
         crop_year_input = st.number_input(' Enter Crop Year value:', min_value= 1998,  help = 'Insert here the year')
         season_type_input = st.selectbox('Select Season:', df['Season'].unique(), format_func=lambda x: x)
         season_input = np.where(df['Season'].unique() == season_type_input)[0][0]
