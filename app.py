@@ -275,11 +275,13 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_yield_predic
     with col3:
         # User input for state
         state_input = st.selectbox('Select State:', df['State_Name'].unique(), format_func=lambda x: x)
+        
 
         # Check if the selected state exists in the dictionary
         if state_input in state_district_map:
             # Get the selected state's districts
             districts_in_state = state_district_map[state_input]
+            state_input = np.where(df['State_Name'].unique() == state_input)[0][0]
             
             # User input for district
             district_input = st.selectbox('Select District:', districts_in_state, format_func=lambda x: x)
