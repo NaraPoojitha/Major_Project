@@ -37,7 +37,7 @@ else:
 # Home page
 if st.session_state['page'] == 'home':
     st.write("# AI-ML Decision System for Effective Farming")
-    st.image("https://cdni.iconscout.com/illustration/premium/thumb/indian-farmer-showing-mobile-2773411-2319316.png", use_column_width=True)
+    st.image("https://pngtree.com/freebackground/fruits-and-vegetables_555942.html", use_column_width=True)
 
 # Crop recommendation page
 if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendation':
