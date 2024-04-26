@@ -136,7 +136,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'fertilizer_recomm
     <style>
     [data-testid="stAppViewContainer"] {{
     background-color:#90EE90; /* changed to #90EE90 */
-    background-image: url("https://www.shutterstock.com/image-vector/farmer-activity-agricultural-concept-colored-260nw-2424129921.jpg");
+    background-image: url("https://media.istockphoto.com/id/1268454391/vector/rice-bags-agricultural-products-brown-and-white-rice-transporting-food-ingredients-vector.jpg?s=612x612&w=0&k=20&c=HkpJdLZIYTr-YZwfn0QHpQ2258XAZaIavntOWLZ2Z0A=");
     background-repeat: no-repeat;
     background-size:cover;
 
