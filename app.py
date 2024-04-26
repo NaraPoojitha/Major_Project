@@ -237,7 +237,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_yield_predic
     <style>
     [data-testid="stAppViewContainer"] {{
     background-color:#90EE90; /* changed to #90EE90 */
-    background-image: url("https://www.agrivi.com/wp-content/uploads/2021/05/Is-Simple-Monoculture-Better-for-Crop-Production-1200x565.jpeg");
+    background-image: url("https://st.depositphotos.com/1916963/2710/v/450/depositphotos_27101323-stock-illustration-wheat-background.jpg");
     background-size:cover;
 
     }}
