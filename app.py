@@ -37,7 +37,7 @@ else:
 # Home page
 if st.session_state['page'] == 'home':
     st.write("# AI-ML Decision System for Effective Farming")
-    st.image("https://pngtree.com/freebackground/fruits-and-vegetables_555942.html", use_column_width=True)
+    st.image("https://cdni.iconscout.com/illustration/premium/thumb/indian-farmer-showing-mobile-2773411-2319316.png", use_column_width=True)
 
 # Crop recommendation page
 if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendation':
@@ -46,7 +46,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
     <style>
     [data-testid="stAppViewContainer"] {{
     background-color:#90EE90; /* changed to #90EE90 */
-    background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-fruit-and-vegetable-food-safety-promotion-background-material-picture-image_967087.jpg");
+    background-image: url("https://pngtree.com/freebackground/green-fresh-vegetables-and-fruits-fresh-food-e-commerce-banner_1109499.html");
     background-repeat: no-repeat;
     background-size:cover;
 
