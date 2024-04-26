@@ -46,7 +46,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
     <style>
     [data-testid="stAppViewContainer"] {{
     background-color:#90EE90; /* changed to #90EE90 */
-    background-image: url("https://pngtree.com/freebackground/green-fresh-vegetables-and-fruits-fresh-food-e-commerce-banner_1109499.html");
+    background-image: url("https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmVnZXRhYmxlcyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
     background-repeat: no-repeat;
     background-size:cover;
 
