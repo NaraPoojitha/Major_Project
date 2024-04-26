@@ -46,7 +46,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
     <style>
     [data-testid="stAppViewContainer"] {{
     background-color:#90EE90; /* changed to #90EE90 */
-    background-image: url("https://img.freepik.com/premium-photo/different-ingredients-cooking-green-background_185193-88921.jpg");
+    background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-fruit-and-vegetable-food-safety-promotion-background-material-picture-image_967087.jpg");
     background-repeat: no-repeat;
     background-size:cover;
 
