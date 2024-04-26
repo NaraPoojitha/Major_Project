@@ -44,9 +44,6 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
 
     page_bg = f"""
     <style>
-    .bold-text {
-        font-weight: bold;
-    }
     [data-testid="stAppViewContainer"] {{
     background-color:#90EE90; /* changed to #90EE90 */
     background-image: url("https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmVnZXRhYmxlcyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
@@ -64,6 +61,9 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
     [data-testid="stToolbar"] {{
     background-color:#90EE90; /* changed to #90EE90 */
     }}
+    .bold-text {
+        font-weight: bold;
+    }
     
     </style>
     """
