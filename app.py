@@ -61,9 +61,6 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_recommendati
     [data-testid="stToolbar"] {{
     background-color:#90EE90; /* changed to #90EE90 */
     }}
-    .bold-text {
-        font-weight: bold;
-    }
     
     </style>
     """
