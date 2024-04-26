@@ -136,7 +136,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'fertilizer_recomm
     <style>
     [data-testid="stAppViewContainer"] {{
     background-color:#90EE90; /* changed to #90EE90 */
-    background-image: url("https://media.istockphoto.com/id/1268454391/vector/rice-bags-agricultural-products-brown-and-white-rice-transporting-food-ingredients-vector.jpg?s=612x612&w=0&k=20&c=HkpJdLZIYTr-YZwfn0QHpQ2258XAZaIavntOWLZ2Z0A=");
+    background-image: url("https://media.istockphoto.com/id/1333335703/vector/illustration-of-an-indian-farmer-spraying-pesticide-in-the-agricultural-field.jpg?s=612x612&w=0&k=20&c=iA4lhoBARD1VtNEmc9GN9YPZwDD-U1WH_W0715ohvgg=");
     background-repeat: no-repeat;
     background-size:cover;
 
