@@ -304,7 +304,7 @@ if 'page' in st.session_state and st.session_state['page'] == 'crop_yield_predic
     with col5:
         crop_input = st.selectbox('Select Crop Type:', df['Crop'].unique(), format_func=lambda x: x)
         crop_type_input = np.where(df['Crop'].unique() == crop_input)[0][0]
-        area_input = st.number_input('Enter Area:', min_value= 0,  help = 'Insert here the area .')
+        area_input = st.number_input('Enter Area:', min_value= 1,  help = 'Insert here the area .')
         
     predict_inputs = [[state_input,district_input,crop_year_input,season_input,crop_type_input,area_input]]
 
